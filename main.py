@@ -63,16 +63,16 @@ while True:
         break
     else:
         print("Opción incorrecta")"""
-
+"""
 lista_alumnos=[]
 def mensaje_menu():
-    menu_opciones="""
+    menu_opciones="
         ...........Bienvenido al sistema!...........
         ................ Registrese ................
                         elije lo que deseas hacer: 
         1. Escribe [s] si deseas registrar un alumno
         2. Escribe [n] si deseas salir del programa
-        Escribe tu respuesta: """
+        Escribe tu respuesta: "
     return menu_opciones
 
 def ingresar_datos_alumnos():
@@ -107,6 +107,24 @@ while True:
         break
     elif menu_opciones.lower()=="s":
         ingresar_datos_alumnos()  
+    else:
+        print("Opcion errónea")
+
+print(lista_alumnos)
+"""
+
+from menu_opciones import *
+from ingresar_datos_alumnos import *
+from guardar_datos_alumnos import *
+
+while True:
+    menu_opciones=input(mensaje_menu())
+
+    if menu_opciones.lower()=="n":
+        print("saliendo del Sistema")
+        break
+    elif menu_opciones.lower()=="s":
+        ingresar_datos_alumnos(lista_alumnos)  
     else:
         print("Opcion errónea")
 
